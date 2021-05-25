@@ -4,10 +4,7 @@ Q: Write a program to reverse an array or string
 #include<bits/stdc++.h>
 using namespace std;
 
-
 string reverseWord(string str);
-
-
 int main() {
 	
 	int t;
@@ -22,12 +19,8 @@ int main() {
 	return 0;
 	
 }
-
 // } Driver Code Ends
-
-
 //User function Template for C++
-
 string reverseWord(string str){
     
   //Your code here
