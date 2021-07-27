@@ -22,6 +22,5 @@ Solution:
                     dp[i]=max(dp[i],dp[j]+1);
             }
         }
-        sort(dp.begin(),dp.end());
-        return dp[n-1];
+          return *max_element(dp.begin(),dp.end());
     }
