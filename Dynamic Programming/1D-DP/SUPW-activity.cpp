@@ -40,7 +40,7 @@ int minCostClimbingStairs(vector<int>& cost) {
     }
 
 /* 
-Now, going back to ouroriginal problem, it can be solved in a similar way:  
+Now, going back to our original problem, it can be solved in a similar way:  
 
 CODE:                                                                         */
 void solve()
