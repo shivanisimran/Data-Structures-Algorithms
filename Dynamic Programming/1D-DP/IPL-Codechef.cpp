@@ -15,7 +15,7 @@ Output:
 23
 (Explanation: 10+3+7+3) 
 
-Sloution:                                                                */
+Solution:                                                                */
 void solve()
 {
   ll n,a[200000];
