@@ -16,7 +16,8 @@ given start and end timings.
 The meetings are - (1, 2),(3, 4), (5,7) and (8,9)
 
 
-Solution: We can sort the activities according to their finishing time so that 
+Solution: This question is same as the Activity-selection problem. 
+          We can sort the activities according to their finishing time so that 
           we always consider the next activity as minimum finishing time activity.
           
           For sorting in increasing order of finishing time, we take priority queue and store finishing time,starting time aspair in it
