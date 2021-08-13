@@ -31,7 +31,7 @@ CODE:                                                                           
         int c=1,x=pq.top().first;
         pq.pop();
         while(!pq.empty()){
-            if(pq.top().second>x){
+            if(pq.top().second>x){  //We can include this activity only if its starting time is greater than previous activity's finish time.
                 c++;
                 x=pq.top().first;
             }
