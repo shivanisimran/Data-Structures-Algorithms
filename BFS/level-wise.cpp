@@ -1,5 +1,7 @@
-/*when we need data for each level separately in a binary tree we collect the data separately for each level using a queue, and traversing the queue for all elements in a particular level.
-Then, similarly do for each level. */
+/*
+when we need data for each level separately in a binary tree we collect the data separately for each level using a queue, 
+and traversing the queue for all elements in a particular level.
+Then, similarly do for each level.                                               */
 
 //Here are some questions which use similar concepts:
 
