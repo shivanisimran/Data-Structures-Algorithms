@@ -25,3 +25,34 @@ int maxChunksToSorted(vector<int>& arr) {
         }
         return c;
     }
+
+
+/* Another version of the problem:
+You are given an integer array arr.
+We split arr into some number of chunks (i.e., partitions), and individually sort each chunk. After concatenating them, the result should equal the sorted array.
+Return the largest number of chunks we can make to sort the array.
+
+Solution:                                                                                                */
+int maxChunksToSorted(vector<int>& arr) {
+        int n=arr.size();
+        vector<int> v;
+        for(int i=0;i<n;i++){
+            v.push_back(arr[i]);
+        }
+        sort(v.begin(),v.end());
+        stack<int> st;
+        long long c=0,s1=0,s2=0;
+        for(int i=0;i<n;i++){
+            s1+=v[i];
+            s2+=arr[i];
+            if(st.empty() || arr[i]>st.top())
+                st.push(arr[i]);
+            
+            //since elements can be repeating so, we will also keep track of the sum upto current index in original array and the sorted array.      
+            if(st.top()==v[i] && s1==s2) {
+                    c++; 
+            }
+           
+        }
+        return c;
+    }
