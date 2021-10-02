@@ -12,7 +12,7 @@ Input: dungeon = [[-2,-3,3],[-5,-10,1],[10,30,-5]]
 Output: 7
 Explanation: The initial health of the knight must be at least 7 if he follows the optimal path: RIGHT-> RIGHT -> DOWN -> DOWN.
 
-Solution: It can go to any cell either from itstop cell or, its right cell.
+Solution: It can go to any cell either from its top cell or, its left cell.
 
 CODE:                                                                                                                                      */
 int calculateMinimumHP(vector<vector<int>>& d) {
