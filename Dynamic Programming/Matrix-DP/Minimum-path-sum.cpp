@@ -6,7 +6,7 @@ Input: grid = [[1,3,1],[1,5,1],[4,2,1]]
 Output: 7
 Explanation: Because the path 1 → 3 → 1 → 1 → 1 minimizes the sum.
 
-Solution: We can go to a cell either from its left cell or its bottom cell.
+Solution: We can go to a cell either from its left cell or its top cell.
 CODE:                                                                                                                                                          */
 
      int minPathSum(vector<vector<int>>& g) {
