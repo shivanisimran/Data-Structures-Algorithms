@@ -11,7 +11,7 @@ From the top-left corner, there are a total of 3 ways to reach the bottom-right 
 2. Down -> Down -> Right
 3. Down -> Right -> Down
 
-Solution:                                           
+Solution: We can go to a cell either from its left cell or its top cell.                                    
 
 CODE:                                                                                                                               */
    int uniquePaths(int m, int n) {
