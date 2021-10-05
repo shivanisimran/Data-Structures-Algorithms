@@ -8,7 +8,7 @@ Explanation: Surrounded regions should not be on the border, which means that an
              Any 'O' that is not on the border and it is not connected to an 'O' on the border will be flipped to 'X'. 
              Two cells are connected if they are adjacent cells connected horizontally or vertically.
              
-Solution: We run DFS on all boundary 'O' and its neighbour 'O's. The 'O's which are covered on doing DFS will be 'O' only. Others will be flipped to'X'.      
+Solution: We run DFS on all boundary 'O' and its neighbour 'O's to exclude them. Then,flip remaining O's to 'X'.   
 CODE:                                                                                                                                                    */
      void solve(vector<vector<char>>& b) {
         int n=b.size(),m=b[0].size();
