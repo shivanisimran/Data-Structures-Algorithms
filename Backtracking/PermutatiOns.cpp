@@ -1,0 +1,34 @@
+/*
+Given an array nums of distinct integers, return all the possible permutations. You can return the answer in any order.
+Input: nums = [1,2,3]
+Output: [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]
+
+Solution:                                                                                                                                                        */
+    set<vector<int>> st;
+    vector<vector<int>> permute(vector<int>& nums) {
+        vector<vector<int>> ans;
+        vector<int>k;
+        for(int i=0;i<nums.size();i++){
+            back(i,nums,k,nums.size());
+        }
+        for(auto i:st)    ans.push_back(i);
+        return ans;
+    }
+
+    void back(int x,vector<int>& nums,vector<int>k,int y){
+        if(x>=0 && x<y && nums[x]!=20){
+            k.push_back(nums[x]);
+            if(k.size()==y){
+                st.insert(k);
+                return;
+            }
+            int c=nums[x];
+            nums[x]=20;
+            for(int i=1;i<y;i++){
+                back(x+i,nums,k,y);
+                back(x-i,nums,k,y);
+            }
+             nums[x]=c;
+        }
+        else    return;
+    }
