@@ -36,3 +36,25 @@ Solution:                                                                       
         }
         return c;
     }
+
+//Optimized:
+    int findKthNumber(int m, int n, int k) {
+        int l=1,r=n*m,ans;
+        while(l<=r){
+            int mid=l+(r-l)/2;
+            if(countless(mid,m,n)>=k){
+                ans=mid;
+                r=mid-1;
+            }
+            else    l=mid+1;     
+        }
+        return ans;
+    }
+    
+    int countless(int x,int m,int n){
+        int c=0;
+        for(int i=1;i<=n;i++){
+            c+=min(x/i , m);
+        }
+        return c;
+    }
