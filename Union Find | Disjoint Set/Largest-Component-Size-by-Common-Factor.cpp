@@ -10,6 +10,7 @@ Output: 4
 
 Solution:                                                                                                                    */
     int par[100001];
+    int rank[100001];
     
     int findpr(int x){
         if(par[x]==x)    return x;
@@ -20,13 +21,13 @@ Solution:                                                                       
         u=findpr(u);
         v=findpr(v);
         
-        if(u==v)    return;
+        if(rank[u]>rank[v])  par[v]=u;
+        else if(rank[u]<rank[v])    par[u]=v;
+        
         else{
             par[u]=v;
-           
-        }
-        
-        
+            rank[v]++;
+        }      
     }
     
     int largestComponentSize(vector<int>& nums) {
