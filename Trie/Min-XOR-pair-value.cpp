@@ -16,37 +16,37 @@ class Solution{
 public:
     struct Trie{
         int value;
-        Trie* children[20];
+        Trie* children[2];
     };
     
-    Trie* getNode(){
-        Trie* newNode = new Trie;
-        newNode->value = 0;
-        newNode->children[0] = newNode->children[1] = NULL;
-        return newNode;
-    }
+    
     
     void insert(Trie* root ,int n){
         Trie* curr=root;
         
-        for(int x=31;x>=0;x--){
+        int x=31;
+        while(x>=0){
             bool d = (n & (1 << x));
             
-            if(curr->children[d] == NULL)   curr->children[d]=getNode();
+            if(curr->children[d] == NULL)   curr->children[d]=new Trie;
             curr=curr->children[d];
+            
+            x--;
         }
         curr->value=n;
     }
     
     int fn(Trie* root,int key){
         Trie* curr=root;
-        for(int x=31;x>=0;x--){
+        int x=31;
+        while(x>=0){
             
-            int d = (key & (1 << x));
+            bool d = (key & (1 << x));
             //cout<<d<<" ";
             if(curr->children[d]!=NULL)  curr=curr->children[d];
             else if(curr->children[1-d]!=NULL)    curr=curr->children[1-d];
-        
+            
+            x--;
         }
         return (key ^ curr->value);
     
@@ -56,7 +56,7 @@ public:
         //code here
         int m=INT_MAX;
         
-        Trie* root = getNode();
+        Trie* root = new Trie;
         insert(root,arr[0]);
 
         for(int i=1; i<n; i++){
