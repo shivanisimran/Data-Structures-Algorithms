@@ -23,7 +23,7 @@ CODE:                                                                           
     
     int nthUglyNumber(int n, int a, int b, int c) {
         int ans;
-        long long l=0,r=2000000000,mid;
+        long long l=0, r=n*min({a,b,c}), mid;
         
         while(l<=r){
             mid=l+(r-l)/2;
