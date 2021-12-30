@@ -24,10 +24,15 @@ Heapify method rearranges the elements of an array where the left and right sub-
 
 **Algorithm for 'heapify':**
 heapify(array)
+
    Root = array[0]
+   
    Largest = largest( harr[0] , harr [2 * 0 + 1]. harr[2 * 0 + 2])
+   
    if(Root != Largest)
+   
        Swap(Root, Largest)
+       
 (Largest will be replaced with smallest in case of min-heaps)
 
 - For insertion,we start heapify from bottom-most node, i.e., follow bottom-up approach.
