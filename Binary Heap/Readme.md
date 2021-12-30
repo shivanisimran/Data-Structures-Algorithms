@@ -23,15 +23,12 @@ The process of reshaping a binary tree into a Heap data structure is known as 'h
 Heapify method rearranges the elements of an array where the left and right sub-tree of ith element obeys the heap property.
 
 **Algorithm for 'heapify':**
-heapify(array)
 
-   Root = array[0]
-   
+heapify(harr)
+   Root = harr[0]
    Largest = largest( harr[0] , harr [2 * 0 + 1]. harr[2 * 0 + 2])
-   
    if(Root != Largest)
-   
-       Swap(Root, Largest)
+       swap(Root, Largest)
        
 (Largest will be replaced with smallest in case of min-heaps)
 
