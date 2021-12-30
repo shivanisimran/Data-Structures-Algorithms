@@ -21,6 +21,7 @@ Below are the indexes of other nodes for the ith node, i.e., **harr[i]** :
 ## Heapify:
 The process of reshaping a binary tree into a Heap data structure is known as 'heapify'.
 Heapify method rearranges the elements of an array where the left and right sub-tree of ith element obeys the heap property.
+It basically picks an index and convert that node and all the nodes below it to heap.
 
 **Algorithm for 'heapify':**
 
