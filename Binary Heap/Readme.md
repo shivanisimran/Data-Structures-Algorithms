@@ -10,6 +10,6 @@ Let the array be harr[].
 The root element will be at harr[0].
 
 Below are the indexes of other nodes for the ith node, i.e., harr[i]:
-** Arr[(i-1)/2] **	Returns the parent node
-** Arr[(2*i)+1]	 ** Returns the left child node
-** Arr[(2*i)+2]  ** 	Returns the right child node
+**Arr[(i-1)/2]**	Returns the parent node
+**Arr[(2*i)+1]** Returns the left child node
+**Arr[(2*i)+2]** 	Returns the right child node
