@@ -19,7 +19,9 @@ Solution:                                                                       
         if(n==0) return 0;
         
         if(dp[n][sum]!=-1) return dp[n][sum];
-        return dp[n][sum] = func(n-1,arr,sum-arr[n-1])||func(n-1,arr,sum);
+        if(arr[n-1]<=sum)  
+            return dp[n][sum] = func(n-1,arr,sum-arr[n-1])||func(n-1,arr,sum);
+        else return dp[n][sum] = func(n-1,arr,sum);
     }
     bool isSubsetSum(int n, int arr[], int sum){
         // code here 
