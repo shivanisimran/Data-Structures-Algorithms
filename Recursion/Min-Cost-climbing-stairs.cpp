@@ -25,7 +25,7 @@ Solution:                                                                       
     }
 
 
-// 2. Iterative
+// 2. Memoized
     int dp[1001];
     int solve(vector<int>& cost,int n){
         if(n==1)  return cost[0];
